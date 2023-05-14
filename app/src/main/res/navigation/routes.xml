@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.omstu.kvantorium.presentation.screens.onboardingpage.OnboardingFragment"
+        android:name="com.omstu.kvantorium.presentation.screens.onboardingscreen.OnboardingFragment"
         android:label="MainFragment" />
 </navigation>

@@ -17,7 +17,7 @@ class MainActivityViewModel : BaseViewModel() {
 
 
     fun openRootScreen() {
-        router.newRootScreen(Screens.getOnboardingFragment())
+        checkOnboardingShowing()
     }
 
     init {
@@ -31,11 +31,21 @@ class MainActivityViewModel : BaseViewModel() {
         )
 
         router.newRootScreen(
-            if (isOnboardingWasShown) Screens.getMainFragment() else Screens.getOnboardingFragment()
+            if (isOnboardingWasShown) checkIsUserAuthorized() else Screens.getOnboardingFragment()
         ).also {
             isOnboardingWasShown = true
         }
 
         //sharedPreferences.set(isOnboardingWasShown)
+    }
+
+    private fun checkIsUserAuthorized(): FragmentScreen {
+        var isAuth = false
+
+        if (isAuth) {
+           return Screens.getUnauthorizedUserMainFragment()
+        } else {
+           TODO()
+        }
     }
 }

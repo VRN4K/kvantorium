@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unauthorized_user_welcome_title">Добро пожаловать</string>
+    <string name="unauthorized_user_description">У вас есть аккаунт в Кванториуме?</string>
+    <string name="unauthorized_user_singup_button_text">Нет, завести аккаунт</string>
+    <string name="unauthorized_user_singin_button_text">Да, у меня есть</string>
+</resources>

@@ -1,4 +1,4 @@
-package com.omstu.kvantorium.presentation.screens.onboardingpage
+package com.omstu.kvantorium.presentation.screens.onboardingscreen
 
 import com.omstu.kvantorium.presentation.base.BaseViewModel
 import androidx.lifecycle.MutableLiveData

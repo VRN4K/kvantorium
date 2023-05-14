@@ -1,4 +1,4 @@
-package com.omstu.kvantorium.presentation.screens.onboardingpage
+package com.omstu.kvantorium.presentation.screens.onboardingscreen
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
