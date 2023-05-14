@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_welcome_title">Добро пожаловать</string>
+    <string name="onboarding_welcome_description">Это приложение детского технопарка “Кванториум” в городе Омск</string>
+
+    <string name="onboarding_schedule_title">Расписание</string>
+    <string name="onboarding_schedule_description">В приложении можно отслеживать актуальное расписание</string>
+
+    <string name="onboarding_notification_title">Уведомления</string>
+    <string name="onboarding_notification_description">Узнавайте об изменениях в расписании и новые новости технопарка</string>
+
+    <string name="onboarding_skip_button">Пропустить</string>
+    <string name="onboarding_lets_start_button">Поехали!</string>
+    <string name="onboarding_next_button">Далее</string>
+
+</resources>

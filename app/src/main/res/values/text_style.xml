@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Названия стиля текста формируется по шаблону:
+  ШрифтНачертание.Цвет.Размер, например, FactorAMedium.Accent.20.
+
+  Шрифты:
+      - Geometria
+  Начертания:
+      - Regular.
+      - Bold.
+  Цвета:
+      - PrimaryText;
+      - SecondaryText;
+  Размеры:
+      -
+
+  Можно брать не конечные стили исключая последующие, например: FactorAMedium, FactorAMedium.Accent;
+  -->
+
+    <!--______________________________TYPEFACE_____________________________________-->
+    <!--______________________________Geometria___________________________________-->
+    <style name="GeometriaRegular">
+        <item name="android:fontFamily">@font/geometriaregular</item>
+    </style>
+
+    <style name="GeometriaBold">
+        <item name="android:fontFamily">@font/geometriabold</item>
+    </style>
+
+    <!--______________________________Color_________________________________________-->
+    <!--______________________________Primary_________________________________-->
+
+    <style name="GeometriaRegular.PrimaryLight">
+        <item name="android:textColor">@color/primary_light</item>
+    </style>
+
+    <style name="GeometriaRegular.PrimaryDark">
+        <item name="android:textColor">@color/primary_dark</item>
+    </style>
+    <!--______________________________Primary_________________________________-->
+    <style name="GeometriaBold.PrimaryLight">
+        <item name="android:textColor">@color/primary_light</item>
+    </style>
+
+    <style name="GeometriaBold.PrimaryDark">
+        <item name="android:textColor">@color/primary_dark</item>
+    </style>
+
+
+    <!--______________________________SIZE_________________________________________-->
+    <!--______________________________24SP_________________________________________-->
+
+    <style name="GeometriaRegular.PrimaryLight.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="GeometriaRegular.PrimaryDark.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="GeometriaBold.PrimaryLight.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="GeometriaBold.PrimaryDark.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <!--______________________________18SP_________________________________________-->
+    <style name="GeometriaRegular.PrimaryLight.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="GeometriaRegular.PrimaryDark.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="GeometriaBold.PrimaryLight.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="GeometriaBold.PrimaryDark.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--______________________________14SP_________________________________________-->
+    <style name="GeometriaRegular.PrimaryLight.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="GeometriaRegular.PrimaryDark.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="GeometriaBold.PrimaryLight.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="GeometriaBold.PrimaryDark.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!--______________________________12SP_________________________________________-->
+    <style name="GeometriaRegular.PrimaryLight.12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="GeometriaRegular.PrimaryDark.12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+
+</resources>
