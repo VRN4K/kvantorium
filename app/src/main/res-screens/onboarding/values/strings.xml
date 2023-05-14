@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="onboarding_welcome_title">Добро пожаловать</string>
+    <string name="onboarding_welcome_title">Давайте знакомиться!</string>
     <string name="onboarding_welcome_description">Это приложение детского технопарка “Кванториум” в городе Омск</string>
 
     <string name="onboarding_schedule_title">Расписание</string>

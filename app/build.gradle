@@ -36,7 +36,7 @@ android {
     sourceSets {
         main {
             res {
-                srcDirs 'src\\main\\res', 'src\\main\\ondoarding', 'src\\main\\res-screen', 'src\\main\\res-screens\\onboarding', 'src\\main\\res-screens\\unauthorized-main'
+                srcDirs 'src\\main\\res', 'src\\main\\ondoarding', 'src\\main\\res-screen', 'src\\main\\res-screens\\onboarding', 'src\\main\\res-screens\\unauthorized-main', 'src\\main\\res-screens\\sing-up'
             }
         }
     }
@@ -44,7 +44,7 @@ android {
 
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.core:core-ktx:1.8.0'
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.6.0'

@@ -37,6 +37,10 @@
     <style name="GeometriaRegular.PrimaryDark">
         <item name="android:textColor">@color/primary_dark</item>
     </style>
+
+    <style name="GeometriaRegular.HintAccent">
+        <item name="android:textColor">@color/hint_accent</item>
+    </style>
     <!--______________________________Primary_________________________________-->
     <style name="GeometriaBold.PrimaryLight">
         <item name="android:textColor">@color/primary_light</item>
@@ -81,6 +85,20 @@
 
     <style name="GeometriaBold.PrimaryDark.18">
         <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--______________________________16SP_________________________________________-->
+
+    <style name="GeometriaRegular.HintAccent.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="GeometriaRegular.PrimaryLight.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="GeometriaRegular.PrimaryDark.16">
+        <item name="android:textSize">16sp</item>
     </style>
 
     <!--______________________________14SP_________________________________________-->

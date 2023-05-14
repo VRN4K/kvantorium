@@ -16,7 +16,7 @@ class OnboardingViewModel : BaseViewModel() {
                 OnboardingItem(
                     R.string.onboarding_welcome_title,
                     R.string.onboarding_welcome_description,
-                    R.drawable.logo
+                    R.drawable.welcome
                 ),
                 OnboardingItem(
                     R.string.onboarding_schedule_title,

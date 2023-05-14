@@ -59,10 +59,10 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
             android:background="@drawable/button_background"
-            android:backgroundTint="@color/primary_light"
+            android:backgroundTint="@color/background_dark_blue"
             android:paddingVertical="8dp"
             android:text="@string/unauthorized_user_singup_button_text"
             android:textAppearance="@style/GeometriaBold.PrimaryDark.18"
-            android:textColor="@color/primary_dark" />
+            android:textColor="@color/primary_light" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

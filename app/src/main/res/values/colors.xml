@@ -11,6 +11,7 @@
     //Text colors
     <color name="primary_dark">#111111</color>
     <color name="primary_light">#FCFCFC</color>
+    <color name="hint_accent">#9FC5E8</color>
 
     //Background
     <color name="background_blue">#107BDB</color>

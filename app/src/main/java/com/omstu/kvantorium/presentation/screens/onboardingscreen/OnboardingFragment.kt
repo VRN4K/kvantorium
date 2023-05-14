@@ -41,6 +41,7 @@ class OnboardingFragment : BaseFragment() {
             onboardingPager.adapter = onboardingAdapter
             onboardingButtonPager.adapter = onboardingButtonAdapter
         }
+
         viewModel.setOnboardingData()
         setObservers()
         setListeners()
