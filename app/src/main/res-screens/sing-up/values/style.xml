@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextInputStyle" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="android:textColorHint">@color/hint_accent</item>
+        <item name="hintTextColor">@color/hint_accent</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="android:layout_marginHorizontal">16dp</item>
+        <item name="errorIconDrawable">@null</item>
+    </style>
+
+
+    <style name="EditTextInputStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColorHint">@color/hint_accent</item>
+        <item name="android:background">@drawable/imput_text_background</item>
+    </style>
+
+</resources>

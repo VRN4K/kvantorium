@@ -1,4 +1,4 @@
-package com.omstu.kvantorium.presentation.screens.onboardingpage
+package com.omstu.kvantorium.presentation.screens.onboardingscreen
 
 import com.omstu.kvantorium.presentation.base.BaseViewModel
 import androidx.lifecycle.MutableLiveData
@@ -16,7 +16,7 @@ class OnboardingViewModel : BaseViewModel() {
                 OnboardingItem(
                     R.string.onboarding_welcome_title,
                     R.string.onboarding_welcome_description,
-                    R.drawable.logo
+                    R.drawable.welcome
                 ),
                 OnboardingItem(
                     R.string.onboarding_schedule_title,

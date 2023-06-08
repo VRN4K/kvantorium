@@ -1,4 +1,4 @@
-package com.omstu.kvantorium.data.storage.preferences
+package com.omstu.kvantorium.data.storage.preferences.base
 
 import android.content.SharedPreferences
 

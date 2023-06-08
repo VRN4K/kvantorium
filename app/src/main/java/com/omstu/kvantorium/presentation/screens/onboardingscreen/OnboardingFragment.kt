@@ -1,4 +1,4 @@
-package com.omstu.kvantorium.presentation.screens.onboardingpage
+package com.omstu.kvantorium.presentation.screens.onboardingscreen
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -19,13 +19,13 @@ class OnboardingFragment : BaseFragment() {
     private val onboardingButtonAdapter by lazy {
         OnboardingButtonAdapter { isLastItem ->
             if (isLastItem){
-                onboardingViewModel.navigateFromOnboarding()
+                viewModel.navigateFromOnboarding()
             }else{
                 binding.onboardingPager.apply { currentItem += 1 }
             }
         }
     }
-    private val onboardingViewModel by lazy { ViewModelProvider(this).get(OnboardingViewModel::class.java) }
+    private val viewModel by lazy { ViewModelProvider(this).get(OnboardingViewModel::class.java) }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,7 +41,8 @@ class OnboardingFragment : BaseFragment() {
             onboardingPager.adapter = onboardingAdapter
             onboardingButtonPager.adapter = onboardingButtonAdapter
         }
-        onboardingViewModel.setOnboardingData()
+
+        viewModel.setOnboardingData()
         setObservers()
         setListeners()
         TabLayoutMediator(binding.intoTabLayout, binding.onboardingPager)
@@ -56,7 +57,7 @@ class OnboardingFragment : BaseFragment() {
     }
 
     private fun setObservers() {
-        onboardingViewModel.apply {
+        viewModel.apply {
             onboardingData.observe(viewLifecycleOwner) {
                 onboardingAdapter.items = it
             }
@@ -70,10 +71,11 @@ class OnboardingFragment : BaseFragment() {
     private fun setListeners() {
         binding.onboardingButtonPager.isUserInputEnabled = false
         binding.onboardingPager.isUserInputEnabled = false
+        binding.skipButton.setOnClickListener { viewModel.navigateFromOnboarding() }
 
     }
 
     private fun onSkipButtonClick() {
-        onboardingViewModel.navigateFromOnboarding()
+        viewModel.navigateFromOnboarding()
     }
 }

@@ -1,14 +1,11 @@
-package com.omstu.kvantorium.presentation.screens.onboardingpage
+package com.omstu.kvantorium.presentation.screens.onboardingscreen
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.omstu.kvantorium.R
 import com.omstu.kvantorium.databinding.OnboardingButtonItemBinding
-import com.omstu.kvantorium.databinding.OnboardingItemBinding
 import com.omstu.kvantorium.domain.datacontracts.model.OnboardingButtonItem
-import com.omstu.kvantorium.domain.datacontracts.model.OnboardingItem
 
 class OnboardingButtonAdapter(private val onNextButtonClick: (Boolean) -> Unit) :
     RecyclerView.Adapter<OnboardingButtonAdapter.OnboardingButtonViewHolder>() {

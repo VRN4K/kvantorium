@@ -17,11 +17,11 @@ abstract class BaseViewModel : ViewModel(), KoinComponent, CoroutineScope {
     override val coroutineContext: CoroutineContext = Dispatchers.IO + job
 
     open fun navigateFromOnboarding() {
-        router.replaceScreen(Screens.getMainFragment())
+        router.newRootScreen(Screens.getUnauthorizedUserMainFragment())
     }
 
-    fun navigateTo(screen: FragmentScreen) {
-        router.navigateTo(Screens.getOnboardingFragment())
+    open fun navigateTo(screen: FragmentScreen) {
+        router.navigateTo(screen)
     }
 
     open fun navigateToPreviousScreen() {

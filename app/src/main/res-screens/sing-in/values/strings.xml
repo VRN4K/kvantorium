@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sing_in_title">Авторизация</string>
+    <string name="sing_in_phone_hint">Номер телефона</string>
+    <string name="sing_in_password_hint">Пароль</string>
+    <string name="sing_in_forgot_password">Забыли пароль?</string>
+    <string name="sing_in_restore_button">Восстановить</string>
+    <string name="sing_in_button">Войти</string>
+
+</resources>
