@@ -21,7 +21,7 @@ abstract class BaseViewModel : ViewModel(), KoinComponent, CoroutineScope {
     }
 
     open fun navigateTo(screen: FragmentScreen) {
-        router.navigateTo(Screens.getOnboardingFragment())
+        router.navigateTo(screen)
     }
 
     open fun navigateToPreviousScreen() {

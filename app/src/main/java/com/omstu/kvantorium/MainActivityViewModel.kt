@@ -3,7 +3,7 @@ package com.omstu.kvantorium
 import com.github.terrakok.cicerone.androidx.FragmentScreen
 import com.omstu.kvantorium.presentation.base.BaseViewModel
 import com.google.gson.Gson
-import com.omstu.kvantorium.data.storage.preferences.BooleanPreference
+import com.omstu.kvantorium.data.storage.preferences.base.BooleanPreference
 import com.omstu.kvantorium.presentation.screens.Screens
 import org.koin.core.component.inject
 

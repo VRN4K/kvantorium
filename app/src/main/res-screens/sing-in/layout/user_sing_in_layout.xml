@@ -11,7 +11,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -20,7 +20,6 @@
             android:id="@+id/back_button"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_gravity=""
             android:layout_marginStart="16dp"
             android:src="@drawable/ic_left" />
 
@@ -29,25 +28,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:text="@string/sing_up_title" />
+            android:text="@string/sing_in_title" />
 
-        <TextView
-            style="@style/GeometriaRegular.PrimaryLight.14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginEnd="16dp"
-            android:text="@string/sing_up_page_counter_1" />
+
     </Toolbar>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edit_text_user_name"
+        android:id="@+id/edit_text_phone"
         style="@style/TextInputStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="@string/sing_up_first_name_hint"
-        android:textColorHint="@color/hint_accent"
+        android:hint="@string/sing_in_phone_hint"
         app:boxStrokeColor="@color/primary_light"
         app:hintTextAppearance="@style/GeometriaRegular.HintAccent.16"
         app:layout_constraintTop_toBottomOf="@id/toolbar">
@@ -56,69 +48,75 @@
             style="@style/EditTextInputStyle"
             android:layout_width="match_parent"
             android:layout_height="68dp"
-            android:inputType="textPersonName"
+            android:inputType="phone"
             android:textAppearance="@style/GeometriaRegular.PrimaryDark.16" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edit_text_user_lastname"
+        android:id="@+id/edit_text_password"
         style="@style/TextInputStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="@string/sing_up_last_name_hint"
+        android:hint="@string/sing_in_password_hint"
         app:boxStrokeColor="@color/primary_light"
+        app:endIconDrawable="@drawable/eye_password_selector"
         app:hintTextAppearance="@style/GeometriaRegular.HintAccent.16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_text_user_name">
+        app:layout_constraintTop_toBottomOf="@id/edit_text_phone">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditText"
             style="@style/EditTextInputStyle"
             android:layout_width="match_parent"
             android:layout_height="68dp"
-            android:inputType="textPersonName|textNoSuggestions"
+            android:inputType="textPassword"
             android:textAppearance="@style/GeometriaRegular.PrimaryDark.16" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/next_screen_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="108dp"
-        android:background="@drawable/main_button_selector"
-        android:paddingVertical="8dp"
-        android:text="@string/onboarding_next_button"
-        android:textAppearance="@style/GeometriaBold.PrimaryDark.18"
-        android:textColor="@drawable/main_button_color_selector"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_text_user_lastname" />
-
     <LinearLayout
-        android:id="@+id/sing_in_button"
+        android:id="@+id/sing_in_restore_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/next_screen_button">
+        app:layout_constraintTop_toBottomOf="@id/edit_text_password">
 
         <TextView
             style="@style/GeometriaRegular.PrimaryLight.14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sing_up_sing_in_text" />
+            android:text="@string/sing_in_forgot_password" />
 
         <TextView
             style="@style/GeometriaBold.PrimaryDark.14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:text="@string/sing_up_sing_in_button" />
+            android:text="@string/sing_in_restore_button" />
     </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sing_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/main_button_selector"
+        android:backgroundTint="@color/primary_light"
+        android:layout_marginTop="24dp"
+        android:paddingVertical="8dp"
+        android:text="@string/sing_in_button"
+        android:textAppearance="@style/GeometriaBold.PrimaryDark.18"
+        android:textColor="@color/primary_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sing_in_restore_button" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

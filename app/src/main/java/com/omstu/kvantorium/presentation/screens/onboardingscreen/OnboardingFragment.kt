@@ -71,6 +71,7 @@ class OnboardingFragment : BaseFragment() {
     private fun setListeners() {
         binding.onboardingButtonPager.isUserInputEnabled = false
         binding.onboardingPager.isUserInputEnabled = false
+        binding.skipButton.setOnClickListener { viewModel.navigateFromOnboarding() }
 
     }
 

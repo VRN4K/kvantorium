@@ -2,4 +2,35 @@
 <resources>
     <string name="sing_up_title">Регистрация</string>
     <string name="sing_up_next_button">Далее</string>
+    <string name="sing_up_sing_in_text">Уже есть аккаунт?</string>
+    <string name="sing_up_sing_in_button">Войти</string>
+
+    <string name="sing_up_first_name_hint">Ваше имя</string>
+    <string name="sing_up_last_name_hint">Ваша фамилия</string>
+    <string name="sing_up_birth_date_hint">Дата Рождения</string>
+    <string name="sing_up_email_hint">Email</string>
+    <string name="sing_up_phone_number_hint">Номер телефона</string>
+
+    <string name="sing_up_radio_button_male_text">Мужской</string>
+    <string name="sing_up_radio_button_female_text">Женский</string>
+
+    <string name="sing_up_page_counter_1">1/3</string>
+    <string name="sing_up_page_counter_2">2/3</string>
+    <string name="sing_up_page_counter_3">3/3</string>
+
+    <string name="sing_up_password_title">Пароль</string>
+    <string name="sing_up_new_password_hint">Введите пароль</string>
+    <string name="sing_up_confirm_password_hint">Подтвердите пароль</string>
+    <string name="sing_up_button_title">Зарегистрироваться</string>
+
+    <string name="sing_up_checkbox_personal_data_text">Я согласен с политикой обработки персональных данных Кванториум</string>
+    <string name="sing_up_checkbox_personal_data_text1">Я согласен на получение рассылок об информации в Кванториуме через  Email</string>
+
+    <string name="sing_up_email_error">Некорректная почта</string>
+    <string name="sing_up_phone_error">Некорректный номер телефона</string>
+
+    <string name="sing_up_current_password_error">Пароль должен содержать не менее 6 символов, латинские буквы верхнего и нижнего регистра.</string>
+    <string name="sing_up_confirm_password_error">Некорректный номер телефона</string>
+    <string name="sing_up_not_equals_passwords_error">Пароли не совпадают</string>
+
 </resources>

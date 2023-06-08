@@ -1,16 +1,22 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
+    id 'com.google.gms.google-services'
     id 'kotlin-kapt'
 }
 
+androidExtensions {
+    experimental = true
+}
+
 android {
-    compileSdk 33
+    compileSdk 32
 
     defaultConfig {
         applicationId "com.omstu.kvantorium"
         minSdk 26
-        targetSdk 33
+        targetSdk 32
         versionCode 1
         versionName "1.0"
 
@@ -36,7 +42,7 @@ android {
     sourceSets {
         main {
             res {
-                srcDirs 'src\\main\\res', 'src\\main\\ondoarding', 'src\\main\\res-screen', 'src\\main\\res-screens\\onboarding', 'src\\main\\res-screens\\unauthorized-main', 'src\\main\\res-screens\\sing-up'
+                srcDirs 'src\\main\\res', 'src\\main\\ondoarding', 'src\\main\\res-screen', 'src\\main\\res-screens\\onboarding', 'src\\main\\res-screens\\unauthorized-main', 'src\\main\\res-screens\\sing-up', 'src\\main\\res-screens\\sing-in'
             }
         }
     }
@@ -45,7 +51,7 @@ android {
 
 dependencies {
     implementation 'androidx.core:core-ktx:1.8.0'
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -83,6 +89,12 @@ dependencies {
     //viewPager 2
     implementation "com.google.android.material:material:material_design_version"
     implementation "androidx.viewpager2:viewpager2:view_pager_version"
+
+    //firebase
+    implementation platform('com.google.firebase:firebase-bom:32.1.0')
+    implementation 'com.google.firebase:firebase-auth:21.0.6'
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.5'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.0.1'
 
 
 }

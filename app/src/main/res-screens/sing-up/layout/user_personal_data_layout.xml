@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_blue"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_left" />
+
+        <TextView
+            android:id="@+id/user_full_name"
+            style="@style/GeometriaBold.PrimaryLight.24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            tools:text="Денис Визигин" />
+
+        <TextView
+            style="@style/GeometriaRegular.PrimaryLight.14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:text="@string/sing_up_page_counter_2" />
+    </Toolbar>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_text_user_birthdate"
+        style="@style/TextInputStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/sing_up_birth_date_hint"
+        app:boxStrokeColor="@color/primary_light"
+        app:hintTextAppearance="@style/GeometriaRegular.HintAccent.16"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/EditTextInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:textAppearance="@style/GeometriaRegular.PrimaryDark.16"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:clickable="true"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_text_user_email"
+        style="@style/TextInputStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/sing_up_email_hint"
+        app:boxStrokeColor="@color/primary_light"
+        app:hintTextAppearance="@style/GeometriaRegular.HintAccent.16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_user_birthdate">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/EditTextInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:textAppearance="@style/GeometriaRegular.PrimaryDark.16"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_text_user_phone_number"
+        style="@style/TextInputStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/sing_up_phone_number_hint"
+        app:boxStrokeColor="@color/primary_light"
+        app:hintTextAppearance="@style/GeometriaRegular.HintAccent.16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_user_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/EditTextInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:digits="0123456789"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textAppearance="@style/GeometriaRegular.PrimaryDark.16"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/gender_selector_title"
+        style="@style/GeometriaBold.PrimaryLight.24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:gravity="start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_user_phone_number"
+        android:text="Укажите пол" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender_selector_title">
+
+        <RadioButton
+            android:id="@+id/radio_male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/background_light"
+            android:text="@string/sing_up_radio_button_male_text"
+            android:textAppearance="@style/GeometriaRegular.PrimaryLight.14"
+            android:textColor="@color/primary_light"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radio_female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/background_light"
+            android:text="@string/sing_up_radio_button_female_text"
+            android:textAppearance="@style/GeometriaRegular.PrimaryLight.14"
+            android:textColor="@color/primary_light" />
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_screen_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/main_button_selector"
+        android:paddingVertical="8dp"
+        android:text="@string/onboarding_next_button"
+        android:textAppearance="@style/GeometriaBold.PrimaryDark.18"
+        android:textColor="@drawable/main_button_color_selector"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

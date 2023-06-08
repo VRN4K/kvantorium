@@ -9,7 +9,7 @@ class App : Application() {
         super.onCreate()
         startKoin {
             androidContext(this@App)
-            modules(ciceroneModule, interactorModule)
+            modules(ciceroneModule, interactorModule, firebaseModule)
         }
     }
 }

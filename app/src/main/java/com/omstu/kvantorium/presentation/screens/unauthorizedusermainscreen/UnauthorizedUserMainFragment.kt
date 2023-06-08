@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.omstu.kvantorium.databinding.UnauthorizedUserMainLayoutBinding
 import com.omstu.kvantorium.presentation.base.BaseFragment
+import com.omstu.kvantorium.presentation.screens.Screens
 import ltst.nibirualert.my.presentation.common.onDestroyNullable
 
 class UnauthorizedUserMainFragment : BaseFragment() {
@@ -35,6 +36,7 @@ class UnauthorizedUserMainFragment : BaseFragment() {
     }
 
     private fun setListeners() {
-
+        binding.singUpButton.setOnClickListener { viewModel.navigateTo(Screens.getSingUpUsernameFragment()) }
+        binding.singInButton.setOnClickListener { viewModel.navigateTo(Screens.getSingUpUsernameFragment()) }
     }
 }

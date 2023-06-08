@@ -18,14 +18,12 @@ class OnboardingAdapter(
         RecyclerView.ViewHolder(binding.root) {
         @SuppressLint("UseCompatLoadingForDrawables")
         fun bindTo(
-            item: OnboardingItem,
-            onSkipButtonClick: () -> Unit,
+            item: OnboardingItem
         ) {
             binding.apply {
                 onboardingTitle.text = root.resources.getText(item.title)
                 onboardingDescription.text = root.resources.getText(item.description)
                 onboardingImg.setImageDrawable(binding.root.context.getDrawable(item.itemImg))
-                skipButton.setOnClickListener { onSkipButtonClick() }
             }
         }
     }
@@ -47,6 +45,6 @@ class OnboardingAdapter(
 
     override fun onBindViewHolder(holder: OnboardingViewHolder, position: Int) {
         val item = items[position]
-        holder.bindTo(item, onSkipButtonClick)
+        holder.bindTo(item)
     }
 }
