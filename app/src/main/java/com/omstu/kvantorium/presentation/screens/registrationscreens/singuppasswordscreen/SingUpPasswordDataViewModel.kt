@@ -27,15 +27,20 @@ class SingUpPasswordDataViewModel(private val user: UserRegisterDataModel) :
 
     fun onRegisterButtonClick(currentPassword: String, confirmPassword: String) {
 
-            if (currentPassword.getValidationCurrentPasswordResult()) {
-                currentPassword.getValidationConfirmPasswordResult(confirmPassword)
+        if (currentPassword.getValidationCurrentPasswordResult()) {
+            if (currentPassword.getValidationConfirmPasswordResult(confirmPassword)){
+                launchIO {
+                    userInteractor.registerNewUser(user, currentPassword)
+                }
             }
-
-        // userInteractor.registerNewUser(user, password)
-
+        }
     }
 
-    fun confirmUserPasswordsData(currentPassword: String, confirmPassword: String, isPersonalDataChecked: Boolean) {
+    fun confirmUserPasswordsData(
+        currentPassword: String,
+        confirmPassword: String,
+        isPersonalDataChecked: Boolean
+    ) {
         val isCurrentPasswordEmpty = currentPassword.isNotEmpty()
         val isConfirmPasswordEmpty = confirmPassword.isNotEmpty()
 
