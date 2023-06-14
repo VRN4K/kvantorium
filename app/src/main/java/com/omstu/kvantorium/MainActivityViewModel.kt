@@ -1,9 +1,10 @@
 package com.omstu.kvantorium
 
-import com.github.terrakok.cicerone.androidx.FragmentScreen
 import com.omstu.kvantorium.presentation.base.BaseViewModel
 import com.google.gson.Gson
 import com.omstu.kvantorium.data.storage.preferences.base.BooleanPreference
+import com.omstu.kvantorium.domain.datacontracts.interfaces.IUserInteractor
+import com.omstu.kvantorium.domain.datacontracts.utils.launchIO
 import com.omstu.kvantorium.presentation.screens.Screens
 import org.koin.core.component.inject
 
@@ -14,6 +15,7 @@ class MainActivityViewModel : BaseViewModel() {
     }
 
     private val sharedPreferences: BooleanPreference by inject()
+    private val userInteractor: IUserInteractor by inject()
 
 
     fun openRootScreen() {
@@ -29,23 +31,23 @@ class MainActivityViewModel : BaseViewModel() {
             sharedPreferences.getValue().toString(),
             Boolean::class.java
         )
-
-        router.newRootScreen(
-            if (isOnboardingWasShown) checkIsUserAuthorized() else Screens.getOnboardingFragment()
-        ).also {
-            isOnboardingWasShown = true
+        launchIO {
+            router.newRootScreen(
+                if (isOnboardingWasShown) {
+                    if (!userInteractor.isUserAuthorized()) {
+                        Screens.getUnauthorizedUserMainFragment()
+                    } else {
+                        Screens.getMainFragment()
+                    }
+                } else {
+                    Screens.getOnboardingFragment()
+                }
+            ).also {
+                isOnboardingWasShown = true
+            }
         }
+
 
         //sharedPreferences.set(isOnboardingWasShown)
-    }
-
-    private fun checkIsUserAuthorized(): FragmentScreen {
-        var isAuth = false
-
-        if (isAuth) {
-           return Screens.getUnauthorizedUserMainFragment()
-        } else {
-           TODO()
-        }
     }
 }

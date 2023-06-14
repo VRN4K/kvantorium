@@ -6,6 +6,7 @@ import java.util.*
 
 object DateTimeMapper {
     const val DATE_PATTERN = "dd MMMM yyyy"
+    const val DATE_PATTERN_WYEAR = "EEEE dd MMMM"
 
 
     @SuppressLint("SimpleDateFormat")
@@ -65,7 +66,9 @@ object DateTimeMapper {
     fun format(date: Date, to: String): String {
         dateFormatter.applyPattern(to)
         val dateString = dateFormatter.format(date).split(" ").toMutableList()
-        dateString[1] = dateString[1].replaceFirstChar { it.titlecase(Locale.getDefault()) }
+            dateString.forEachIndexed { index, s ->
+                dateString[index] = dateString[index].replaceFirstChar { it.titlecase(Locale.getDefault()) }
+            }
 
         return dateString.joinToString(" ")
     }

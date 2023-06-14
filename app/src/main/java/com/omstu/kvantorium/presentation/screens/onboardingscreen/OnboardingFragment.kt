@@ -9,7 +9,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.omstu.kvantorium.databinding.OnboardingLayoutBinding
 import com.omstu.kvantorium.presentation.base.BaseFragment
 
-import ltst.nibirualert.my.presentation.common.onDestroyNullable
+import com.omstu.kvantorium.presentation.common.onDestroyNullable
 
 class OnboardingFragment : BaseFragment() {
     private var binding by onDestroyNullable<OnboardingLayoutBinding>()
@@ -19,7 +19,7 @@ class OnboardingFragment : BaseFragment() {
     private val onboardingButtonAdapter by lazy {
         OnboardingButtonAdapter { isLastItem ->
             if (isLastItem){
-                viewModel.navigateFromOnboarding()
+                viewModel.navigateFromOnboardingScreen()
             }else{
                 binding.onboardingPager.apply { currentItem += 1 }
             }
@@ -37,6 +37,7 @@ class OnboardingFragment : BaseFragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        setNavigationVisibility(false)
         binding.apply {
             onboardingPager.adapter = onboardingAdapter
             onboardingButtonPager.adapter = onboardingButtonAdapter
@@ -71,11 +72,11 @@ class OnboardingFragment : BaseFragment() {
     private fun setListeners() {
         binding.onboardingButtonPager.isUserInputEnabled = false
         binding.onboardingPager.isUserInputEnabled = false
-        binding.skipButton.setOnClickListener { viewModel.navigateFromOnboarding() }
+        binding.skipButton.setOnClickListener { viewModel.navigateFromOnboardingScreen() }
 
     }
 
     private fun onSkipButtonClick() {
-        viewModel.navigateFromOnboarding()
+        viewModel.navigateFromOnboardingScreen()
     }
 }

@@ -34,12 +34,12 @@
     </Toolbar>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edit_text_phone"
+        android:id="@+id/edit_text_user_email"
         style="@style/TextInputStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="@string/sing_in_phone_hint"
+        android:hint="@string/sing_up_email_hint"
         app:boxStrokeColor="@color/primary_light"
         app:hintTextAppearance="@style/GeometriaRegular.HintAccent.16"
         app:layout_constraintTop_toBottomOf="@id/toolbar">
@@ -48,8 +48,8 @@
             style="@style/EditTextInputStyle"
             android:layout_width="match_parent"
             android:layout_height="68dp"
-            android:inputType="phone"
-            android:textAppearance="@style/GeometriaRegular.PrimaryDark.16" />
+            android:textAppearance="@style/GeometriaRegular.PrimaryDark.16"
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -64,7 +64,7 @@
         app:hintTextAppearance="@style/GeometriaRegular.HintAccent.16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_text_phone">
+        app:layout_constraintTop_toBottomOf="@id/edit_text_user_email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputEditText"

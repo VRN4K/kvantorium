@@ -1,6 +1,5 @@
 package com.omstu.kvantorium.presentation.screens.registrationscreens.singupusernamescreen
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.omstu.kvantorium.databinding.UsernameSingUpLayoutBinding
 import com.omstu.kvantorium.presentation.base.BaseFragment
 import com.omstu.kvantorium.presentation.screens.Screens
-import ltst.nibirualert.my.presentation.common.onDestroyNullable
+import com.omstu.kvantorium.presentation.common.onDestroyNullable
 
 class SingUpUserNameFragment : BaseFragment() {
     private var binding by onDestroyNullable<UsernameSingUpLayoutBinding>()
@@ -28,6 +27,7 @@ class SingUpUserNameFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.nextScreenButton.isEnabled = false
+        setNavigationVisibility(false)
         setObservers()
         setListeners()
         super.onViewCreated(view, savedInstanceState)

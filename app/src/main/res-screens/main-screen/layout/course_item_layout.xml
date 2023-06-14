@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="19dp">
+
+
+        <TextView
+            android:id="@+id/item_course_name"
+            style="@style/GeometriaBold.PrimaryDark.14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Космоквантум" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/line" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/ic_time" />
+
+            <TextView
+                android:id="@+id/item_course_time"
+                style="@style/GeometriaBold.PrimaryDark.14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="10:00 - 11:40" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/ic_tag" />
+
+            <TextView
+                android:id="@+id/item_course_cabinet"
+                style="@style/GeometriaBold.PrimaryDark.14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Кабинет 12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/ic_star" />
+
+            <TextView
+                android:id="@+id/item_course_lector"
+                style="@style/GeometriaBold.PrimaryDark.14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Понятовская А.Г." />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

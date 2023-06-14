@@ -12,8 +12,7 @@ import com.omstu.kvantorium.domain.datacontracts.model.UserRegisterDataModel
 import com.omstu.kvantorium.domain.datacontracts.model.UserSex
 import com.omstu.kvantorium.presentation.base.BaseFragment
 import com.omstu.kvantorium.presentation.common.showError
-import com.omstu.kvantorium.presentation.screens.Screens
-import ltst.nibirualert.my.presentation.common.onDestroyNullable
+import com.omstu.kvantorium.presentation.common.onDestroyNullable
 import java.util.*
 
 class SingUpPersonalDataFragment : BaseFragment() {
@@ -49,7 +48,7 @@ class SingUpPersonalDataFragment : BaseFragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
+        setNavigationVisibility(false)
         setObservers()
         setListeners()
         super.onViewCreated(view, savedInstanceState)
@@ -95,12 +94,12 @@ class SingUpPersonalDataFragment : BaseFragment() {
                         true else radioFemale.isChecked = true
                 }
 
-                birthdayText.observe(viewLifecycleOwner){
+                birthdayText.observe(viewLifecycleOwner) {
                     editTextUserBirthdate.editText!!.setText(it)
                 }
 
                 birthdayDateToOpenDialog.observe(viewLifecycleOwner) {
-                    if (it){
+                    if (it) {
                         DatePickerDialog(
                             requireContext(),
                             { _, year, month, dayOfMonth ->
@@ -129,8 +128,8 @@ class SingUpPersonalDataFragment : BaseFragment() {
             }
 
             editTextUserBirthdate.editText!!.apply {
-                setOnClickListener {  viewModel.openStartDateDialog() }
-                setOnFocusChangeListener { _, _ ->  viewModel.openStartDateDialog() }
+                setOnClickListener { viewModel.openStartDateDialog() }
+                setOnFocusChangeListener { _, _ -> viewModel.openStartDateDialog() }
             }
         }
     }

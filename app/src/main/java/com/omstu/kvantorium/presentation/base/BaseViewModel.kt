@@ -16,12 +16,16 @@ abstract class BaseViewModel : ViewModel(), KoinComponent, CoroutineScope {
     private val job = SupervisorJob()
     override val coroutineContext: CoroutineContext = Dispatchers.IO + job
 
-    open fun navigateFromOnboarding() {
-        router.newRootScreen(Screens.getUnauthorizedUserMainFragment())
+    open fun navigateFromOnboarding(isUserAuthorized: Boolean) {
+        router.newRootScreen(if (isUserAuthorized) Screens.getMainFragment() else Screens.getUnauthorizedUserMainFragment())
     }
 
     open fun navigateTo(screen: FragmentScreen) {
         router.navigateTo(screen)
+    }
+
+    open fun navigateToNewRoot(screen: FragmentScreen) {
+        router.newRootScreen(screen)
     }
 
     open fun navigateToPreviousScreen() {

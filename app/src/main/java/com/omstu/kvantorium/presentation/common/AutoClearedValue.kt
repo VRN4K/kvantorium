@@ -1,4 +1,4 @@
-package ltst.nibirualert.my.presentation.common
+package com.omstu.kvantorium.presentation.common
 
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner

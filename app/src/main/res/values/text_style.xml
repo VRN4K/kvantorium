@@ -28,7 +28,6 @@
     </style>
 
     <!--______________________________Color_________________________________________-->
-    <!--______________________________Primary_________________________________-->
 
     <style name="GeometriaRegular.PrimaryLight">
         <item name="android:textColor">@color/primary_light</item>
@@ -41,13 +40,29 @@
     <style name="GeometriaRegular.HintAccent">
         <item name="android:textColor">@color/hint_accent</item>
     </style>
-    <!--______________________________Primary_________________________________-->
+
     <style name="GeometriaBold.PrimaryLight">
         <item name="android:textColor">@color/primary_light</item>
     </style>
 
     <style name="GeometriaBold.PrimaryDark">
         <item name="android:textColor">@color/primary_dark</item>
+    </style>
+
+    <style name="GeometriaBold.DarkBlue">
+        <item name="android:textColor">@color/background_dark_blue</item>
+    </style>
+
+    <style name="GeometriaRegular.DarkBlue">
+        <item name="android:textColor">@color/background_dark_blue</item>
+    </style>
+
+    <style name="GeometriaBold.Gray">
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+
+    <style name="GeometriaRegular.Gray">
+        <item name="android:textColor">@color/text_gray</item>
     </style>
 
 
@@ -68,6 +83,33 @@
 
     <style name="GeometriaBold.PrimaryDark.24">
         <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="GeometriaRegular.DarkBlue.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="GeometriaBold.DarkBlue.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+
+    <!--______________________________20SP_________________________________________-->
+
+    <style name="GeometriaRegular.PrimaryLight.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="GeometriaRegular.PrimaryDark.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="GeometriaBold.PrimaryLight.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="GeometriaBold.PrimaryDark.20">
+        <item name="android:textSize">20sp</item>
     </style>
 
     <!--______________________________18SP_________________________________________-->
@@ -106,15 +148,23 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="GeometriaRegular.Gray.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="GeometriaBold.Gray.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="GeometriaBold.PrimaryDark.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
     <style name="GeometriaRegular.PrimaryDark.14">
         <item name="android:textSize">14sp</item>
     </style>
 
     <style name="GeometriaBold.PrimaryLight.14">
-        <item name="android:textSize">14sp</item>
-    </style>
-
-    <style name="GeometriaBold.PrimaryDark.14">
         <item name="android:textSize">14sp</item>
     </style>
     <!--______________________________12SP_________________________________________-->
@@ -126,6 +176,8 @@
         <item name="android:textSize">12sp</item>
     </style>
 
-
+    <style name="GeometriaRegular.DarkBlue.12">
+        <item name="android:textSize">12sp</item>
+    </style>
 
 </resources>

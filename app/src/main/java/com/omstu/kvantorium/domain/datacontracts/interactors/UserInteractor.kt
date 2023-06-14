@@ -23,10 +23,8 @@ class UserInteractor(
     }
 
     override suspend fun registerNewUser(user: UserRegisterDataModel, password: String) {
-
         val userToken = authRepository.registerNewUser(user, password)
         if (!userToken.isNullOrEmpty()) {
-            //registerRequestData.userInfo.singUpDate = dateFormat.format(Calendar.getInstance().time)
             userDBRepository.addUser(
                 getUserId()!!,
                 UserEntity(

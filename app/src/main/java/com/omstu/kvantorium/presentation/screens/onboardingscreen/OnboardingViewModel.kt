@@ -3,12 +3,22 @@ package com.omstu.kvantorium.presentation.screens.onboardingscreen
 import com.omstu.kvantorium.presentation.base.BaseViewModel
 import androidx.lifecycle.MutableLiveData
 import com.omstu.kvantorium.R
+import com.omstu.kvantorium.domain.datacontracts.interfaces.IUserInteractor
 import com.omstu.kvantorium.domain.datacontracts.model.OnboardingButtonItem
 import com.omstu.kvantorium.domain.datacontracts.model.OnboardingItem
+import com.omstu.kvantorium.domain.datacontracts.utils.launchIO
+import org.koin.core.component.inject
 
 class OnboardingViewModel : BaseViewModel() {
+    private val userInteractor: IUserInteractor by inject()
     var onboardingData = MutableLiveData<MutableList<OnboardingItem>>()
     var onboardingButtonData = MutableLiveData<MutableList<OnboardingButtonItem>>()
+
+    fun navigateFromOnboardingScreen() {
+        launchIO {
+            navigateFromOnboarding(userInteractor.isUserAuthorized())
+        }
+    }
 
     fun setOnboardingData() {
         onboardingData.postValue(

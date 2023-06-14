@@ -11,8 +11,7 @@ import com.omstu.kvantorium.databinding.UserPasswordLayoutBinding
 import com.omstu.kvantorium.domain.datacontracts.model.UserRegisterDataModel
 import com.omstu.kvantorium.presentation.base.BaseFragment
 import com.omstu.kvantorium.presentation.common.showError
-import com.omstu.kvantorium.presentation.screens.registrationscreens.singuppersonaldatascreen.SingUpPersonalDataViewModelFactory
-import ltst.nibirualert.my.presentation.common.onDestroyNullable
+import com.omstu.kvantorium.presentation.common.onDestroyNullable
 
 class SingUpPasswordFragment : BaseFragment() {
     companion object {
@@ -48,6 +47,7 @@ class SingUpPasswordFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.singUpButton.isEnabled = false
+        setNavigationVisibility(false)
         setObservers()
         setListeners()
         super.onViewCreated(view, savedInstanceState)

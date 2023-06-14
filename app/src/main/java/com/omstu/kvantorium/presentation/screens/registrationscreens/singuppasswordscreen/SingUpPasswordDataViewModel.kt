@@ -3,9 +3,10 @@ package com.omstu.kvantorium.presentation.screens.registrationscreens.singuppass
 import androidx.lifecycle.MutableLiveData
 import com.omstu.kvantorium.R
 import com.omstu.kvantorium.domain.datacontracts.interfaces.IUserInteractor
-import com.omstu.kvantorium.domain.datacontracts.launchIO
+import com.omstu.kvantorium.domain.datacontracts.utils.launchIO
 import com.omstu.kvantorium.domain.datacontracts.model.UserRegisterDataModel
 import com.omstu.kvantorium.presentation.base.BaseViewModel
+import com.omstu.kvantorium.presentation.screens.Screens
 import org.koin.core.component.inject
 
 class SingUpPasswordDataViewModel(private val user: UserRegisterDataModel) :
@@ -31,6 +32,7 @@ class SingUpPasswordDataViewModel(private val user: UserRegisterDataModel) :
             if (currentPassword.getValidationConfirmPasswordResult(confirmPassword)){
                 launchIO {
                     userInteractor.registerNewUser(user, currentPassword)
+                    navigateToNewRoot(Screens.getMainFragment())
                 }
             }
         }

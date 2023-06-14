@@ -40,7 +40,7 @@
             android:textAlignment="center" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/sing_up_button"
+            android:id="@+id/sing_in_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
@@ -54,7 +54,7 @@
             android:textColor="@color/primary_light" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/sing_in_button"
+            android:id="@+id/sing_up_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"

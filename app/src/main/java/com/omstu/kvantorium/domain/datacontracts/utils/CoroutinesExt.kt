@@ -1,4 +1,6 @@
-package com.omstu.kvantorium.domain.datacontracts
+package com.omstu.kvantorium.domain.datacontracts.utils
+
+import com.omstu.kvantorium.presentation.common.exceptions.CommonExceptionHandler
 import kotlinx.coroutines.*
 
 fun CoroutineScope.launchUI(callback: suspend () -> Unit) =
@@ -9,6 +11,12 @@ fun CoroutineScope.launchUI(handler: CoroutineExceptionHandler, callback: suspen
 
 fun CoroutineScope.launchIO(callback: suspend () -> Unit) =
     launch(Dispatchers.IO) { callback() }
+
+fun CoroutineScope.launchIO(handler: CommonExceptionHandler, callback: suspend () -> Unit) =
+    launch(Dispatchers.IO + with(handler) {
+        setCallback(callback)
+        coroutineHandler
+    }) { callback() }
 
 suspend fun <T> withIO(callback: suspend () -> T) = withContext(Dispatchers.IO) { callback() }
 

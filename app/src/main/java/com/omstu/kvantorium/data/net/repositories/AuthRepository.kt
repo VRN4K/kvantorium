@@ -4,6 +4,7 @@ import android.util.Log
 import com.google.firebase.auth.*
 import com.omstu.kvantorium.domain.datacontracts.interfaces.IAuthRepository
 import com.omstu.kvantorium.domain.datacontracts.model.UserRegisterDataModel
+import com.omstu.kvantorium.presentation.common.exceptions.WrongEmailOrPasswordException
 import org.koin.core.component.KoinComponent
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
@@ -26,7 +27,7 @@ class AuthRepository(private val firebaseAuth: FirebaseAuth) : IAuthRepository, 
                         if (task.exception is FirebaseAuthInvalidUserException ||
                             task.exception is FirebaseAuthInvalidCredentialsException
                         ) {
-                            //it.resumeWithException(WrongEmailOrPasswordException())
+                            it.resumeWithException(WrongEmailOrPasswordException())
                         }
                     }
                 }

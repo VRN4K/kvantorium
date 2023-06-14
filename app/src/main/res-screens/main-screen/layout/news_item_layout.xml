@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginVertical="5dp"
+    android:layout_marginHorizontal="2dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="14dp"
+        android:paddingTop="18dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp">
+
+            <ImageView
+                android:id="@+id/news_image"
+                android:layout_width="match_parent"
+                android:layout_height="136dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/rectangle22" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/news_title"
+            style="@style/GeometriaBold.PrimaryDark.18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            tools:text="Аэрокосмический фестиваль" />
+
+        <TextView
+            android:id="@+id/news_description"
+            style="@style/GeometriaRegular.Gray.14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            tools:text="Аэрокосмический фестиваль - 2023 проводится с целью популяризации ракетно-космической отрасли и авиационной промышленности, профессиональной ориентации обучающихся для дальнейшей деятельности в интересах научно-технического развития страны." />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

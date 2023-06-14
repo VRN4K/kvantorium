@@ -42,7 +42,7 @@ android {
     sourceSets {
         main {
             res {
-                srcDirs 'src\\main\\res', 'src\\main\\ondoarding', 'src\\main\\res-screen', 'src\\main\\res-screens\\onboarding', 'src\\main\\res-screens\\unauthorized-main', 'src\\main\\res-screens\\sing-up', 'src\\main\\res-screens\\sing-in'
+                srcDirs 'src\\main\\res', 'src\\main\\ondoarding', 'src\\main\\res-screen', 'src\\main\\res-screens\\onboarding', 'src\\main\\res-screens\\unauthorized-main', 'src\\main\\res-screens\\sing-up', 'src\\main\\res-screens\\sing-in', 'src\\main\\res-screens\\main-screen', 'src\\main\\res-screens\\newsscreen', 'src\\main\\res-screens\\news-screens'
             }
         }
     }
