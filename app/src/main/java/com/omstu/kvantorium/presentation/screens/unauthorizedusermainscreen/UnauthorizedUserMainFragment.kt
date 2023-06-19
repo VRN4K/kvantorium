@@ -25,14 +25,9 @@ class UnauthorizedUserMainFragment : BaseFragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-        setObservers()
+        setNavigationVisibility(false)
         setListeners()
         super.onViewCreated(view, savedInstanceState)
-    }
-
-    private fun setObservers() {
-
     }
 
     private fun setListeners() {

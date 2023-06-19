@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_blue"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity=""
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_left" />
+
+        <TextView
+            style="@style/GeometriaBold.PrimaryLight.24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="Электронная почта" />
+
+    </Toolbar>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_text_user_lastname"
+        style="@style/TextInputStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Новый Email"
+        app:boxStrokeColor="@color/primary_light"
+        app:hintTextAppearance="@style/GeometriaRegular.HintAccent.16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/EditTextInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:textAppearance="@style/GeometriaRegular.PrimaryDark.16"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_screen_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="131dp"
+        android:background="@drawable/main_button_selector"
+        android:paddingVertical="8dp"
+        android:text="Сохранить"
+        android:textAppearance="@style/GeometriaBold.PrimaryDark.18"
+        android:textColor="@drawable/main_button_color_selector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_user_lastname" />
+</androidx.constraintlayout.widget.ConstraintLayout>

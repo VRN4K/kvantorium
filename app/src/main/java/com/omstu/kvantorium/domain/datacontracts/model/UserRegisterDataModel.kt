@@ -18,3 +18,13 @@ enum class UserSex(val value: String){
     MALE("Мужской"),
     FEMALE("Женский"),
 }
+
+@Parcelize
+data class ProfileUserDataModel(
+    var userFirstName: String,
+    var userLastName: String,
+    var userBirthdayDate: String,
+    var userEmail: String,
+    var userPhoneNumber: String,
+    var userSex: UserSex
+) : Parcelable

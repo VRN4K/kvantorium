@@ -20,12 +20,10 @@ class CourseItemDataAdapter(private val resources: Resources) :
             resources: Resources
         ) {
             binding.apply {
-                binding.apply {
                     itemCourseName.text = item.courseName
                     itemCourseTime.text = item.courseTime
                     itemCourseCabinet.text = item.courseCabinet
                     itemCourseLector.text = item.courseLector
-                }
             }
         }
     }

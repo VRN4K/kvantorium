@@ -6,3 +6,9 @@ data class ScheduleDataModel(
     val courseCabinet: String,
     val courseLector: String
 )
+
+data class ProfileScheduleDataModel(
+    val courseName : String,
+    val courseLectors: List<String>,
+    val courseIcon: Int
+)

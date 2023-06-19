@@ -42,7 +42,7 @@ android {
     sourceSets {
         main {
             res {
-                srcDirs 'src\\main\\res', 'src\\main\\ondoarding', 'src\\main\\res-screen', 'src\\main\\res-screens\\onboarding', 'src\\main\\res-screens\\unauthorized-main', 'src\\main\\res-screens\\sing-up', 'src\\main\\res-screens\\sing-in', 'src\\main\\res-screens\\main-screen', 'src\\main\\res-screens\\newsscreen', 'src\\main\\res-screens\\news-screens'
+                srcDirs 'src\\main\\res', 'src\\main\\ondoarding', 'src\\main\\res-screen', 'src\\main\\res-screens\\onboarding', 'src\\main\\res-screens\\unauthorized-main', 'src\\main\\res-screens\\sing-up', 'src\\main\\res-screens\\sing-in', 'src\\main\\res-screens\\main-screen', 'src\\main\\res-screens\\newsscreen', 'src\\main\\res-screens\\news-screens', 'src\\main\\res-screens\\profile', 'src\\main\\res-screens\\notificationscreen', 'src\\main\\res-screens\\update-profile-screen', 'src\\main\\res-screens\\update-phone-number', 'src\\main\\res-screens\\update-birthday', 'src\\main\\res-screens\\update-email'
             }
         }
     }

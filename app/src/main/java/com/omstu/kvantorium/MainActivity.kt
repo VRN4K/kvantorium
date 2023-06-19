@@ -2,6 +2,7 @@ package com.omstu.kvantorium
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.forEach
 import androidx.lifecycle.ViewModelProvider
 import com.github.terrakok.cicerone.NavigatorHolder
 import com.github.terrakok.cicerone.androidx.AppNavigator
@@ -29,14 +30,32 @@ class MainActivity : AppCompatActivity(), BaseView {
         mainActivityViewModel.openRootScreen()
     }
 
+    override fun onStart() {
+        super.onStart()
+        setListeners()
+    }
+
     override fun setNavigationVisibility(isVisible: Boolean) {
         binding.bottomNavigationView.setVisibility(isVisible)
+    }
+
+    private fun setListeners() {
+        binding.bottomNavigationView.menu.forEach { menuItem ->
+            NavBarItems.values().onEach { navBarItem ->
+                if (menuItem.itemId == navBarItem.menuId) menuItem.setOnMenuItemClickListener {
+                    mainActivityViewModel.navigateTo(
+                        navBarItem.screen
+                    )
+                    false
+                }
+            }
+        }
     }
 }
 
 enum class NavBarItems(val menuId: Int, val screen: FragmentScreen) {
-    HOME(R.id.navigation_item_main, Screens.getUnauthorizedUserMainFragment()),
+    HOME(R.id.navigation_item_main, Screens.getMainFragment()),
     CALENDAR(R.id.navigation_item_calendar, Screens.getUnauthorizedUserMainFragment()),
-    NOTIFICATION(R.id.navigation_item_notification, Screens.getUnauthorizedUserMainFragment()),
-    PROFILE(R.id.navigation_item_profile, Screens.getUnauthorizedUserMainFragment())
+    NOTIFICATION(R.id.navigation_item_notification, Screens.getNotificationFragment()),
+    PROFILE(R.id.navigation_item_profile, Screens.getProfileFragment())
 }

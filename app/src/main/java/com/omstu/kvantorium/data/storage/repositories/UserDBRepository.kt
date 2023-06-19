@@ -50,8 +50,30 @@ class UserDBRepository(private val database: FirebaseDatabase) :
         }
     }
 
-    override fun updateUser(userId: String, levelValue: String) {
-        dataBaseReference.child(userId).child("englishLevel").setValue(levelValue)
+    override suspend fun updateUserPhone(userId: String, phone: String) {
+        dataBaseReference.child(userId).child("userPhoneNumber").setValue(phone)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Log.d("USER", "addUserInfo:success")
+                } else {
+                    Log.d("USER", "addUserInfo:failure", task.exception)
+                }
+            }
+    }
+
+    override suspend fun updateUserEmail(userId: String, email: String) {
+        dataBaseReference.child(userId).child("userEmail").setValue(email)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Log.d("USER", "addUserInfo:success")
+                } else {
+                    Log.d("USER", "addUserInfo:failure", task.exception)
+                }
+            }
+    }
+
+    override suspend fun updateUserBirthday(userId: String, birthday: String) {
+        dataBaseReference.child(userId).child("userBirthday").setValue(birthday)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Log.d("USER", "addUserInfo:success")

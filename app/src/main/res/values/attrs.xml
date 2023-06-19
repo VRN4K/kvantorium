@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BetterViewAnimator">
+        <attr name="visible_child" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="PeriodPickerCustomView">
+        <attr name="start_date" format="string" />
+        <attr name="end_date" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="BarChart">
+        <attr name="radius" format="integer" />
+    </declare-styleable>
+</resources>

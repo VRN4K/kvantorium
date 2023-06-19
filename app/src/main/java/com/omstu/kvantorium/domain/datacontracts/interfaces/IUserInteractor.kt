@@ -1,6 +1,6 @@
 package com.omstu.kvantorium.domain.datacontracts.interfaces
 
-import com.omstu.kvantorium.data.storage.entities.UserEntity
+import com.omstu.kvantorium.domain.datacontracts.model.ProfileUserDataModel
 import com.omstu.kvantorium.domain.datacontracts.model.UserRegisterDataModel
 
 interface IUserInteractor {
@@ -11,9 +11,8 @@ interface IUserInteractor {
     suspend fun registerNewUser(user: UserRegisterDataModel, password: String)
     fun getUserId(): String?
     suspend fun isCodeValid(code: String): Boolean
-    fun getCurrentUser(): UserEntity
-    //suspend fun changeUserPassword(passwordChangeModel: PasswordChangeModel)
-   // suspend fun updateUserInfo(updateUserEntity: UpdateUserEntity)
-   // suspend fun resetPassword(code: String, newPassword: String)
-   // suspend fun sendEmailResetPasswordMessage(email: String)
+    suspend fun getCurrentUser(): ProfileUserDataModel
+    suspend fun updateUserPhone(userId: String, phone: String)
+    suspend fun updateUserEmail(userId: String, email: String)
+    suspend fun updateUserBirthday(userId: String, birthday: String)
 }

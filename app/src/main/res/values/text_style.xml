@@ -131,6 +131,14 @@
 
     <!--______________________________16SP_________________________________________-->
 
+    <style name="GeometriaBold.PrimaryLight.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="GeometriaBold.PrimaryDark.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <style name="GeometriaRegular.HintAccent.16">
         <item name="android:textSize">16sp</item>
     </style>
@@ -145,6 +153,10 @@
 
     <!--______________________________14SP_________________________________________-->
     <style name="GeometriaRegular.PrimaryLight.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="GeometriaRegular.HintAccent.14">
         <item name="android:textSize">14sp</item>
     </style>
 
